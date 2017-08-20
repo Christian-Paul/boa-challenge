@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import AppContainer from './containers/AppContainer.js';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore } from 'redux';
