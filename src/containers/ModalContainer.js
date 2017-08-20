@@ -3,7 +3,8 @@ import Modal from '../components/Modal.jsx';
 import { changeActiveModal } from '../actions';
 
 const mapStateToProps = (state) => ({
-	user: state.user
+	user: state.user,
+	activeModal: state.activeModal
 })
 
 const mapDispatchToProps = {

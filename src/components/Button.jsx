@@ -18,7 +18,7 @@ const modal = (title) => (title !== 'Favourite Teams') ? (
 )
 
 const Button = ({ changeActiveModal, title, info }) => (
-	<button className='button' onClick={() => changeActiveModal('team')}>
+	<button className='button' onClick={() => changeActiveModal(modal(title))}>
 		{buttonText(title, info)}
 	</button>
 )
