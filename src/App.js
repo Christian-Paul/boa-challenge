@@ -11,7 +11,7 @@ class App extends Component {
       <div className='app'>
         <Navbar page='Sports Magazine' />
         <Settings />
-        <Modal />
+        {this.props.activeModal && <Modal />}
       </div>
     );
   }
