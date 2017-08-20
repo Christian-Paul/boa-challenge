@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar.jsx';
 import SettingsContainer from './containers/SettingsContainer.js';
-import Modal from './components/Modal.jsx';
+import ModalContainer from './containers/ModalContainer.js';
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className='app'>
         <Navbar page='Sports Magazine' />
         <SettingsContainer />
-        {this.props.activeModal && <Modal />}
+        {this.props.activeModal && <ModalContainer />}
       </div>
     );
   }
