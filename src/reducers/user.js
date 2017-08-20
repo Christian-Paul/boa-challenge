@@ -6,8 +6,12 @@ const defaultState = {
 
 const user = (state = defaultState, action) => {
 	switch (action.type) {
-		case 'UPDATE_INFO':
-			return state;
+		case 'UPDATE_NAME':
+			return {...state, name: action.data};
+		case 'UPDATE_ADDRESS':
+			return {...state, address: action.data};
+		case 'UPDATE_TEAMS':
+			return {...state, teams: action.data};
 		default:
 			return state;
 	}

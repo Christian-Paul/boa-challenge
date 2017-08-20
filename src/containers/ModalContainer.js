@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Modal from '../components/Modal.jsx';
-import { changeActiveModal } from '../actions';
+import { changeActiveModal, updateUserName, updateUserAddress, updateUserTeams } from '../actions';
 
 const mapStateToProps = (state) => ({
 	user: state.user,
@@ -8,7 +8,10 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-	changeActiveModal
+	changeActiveModal,
+	updateUserName,
+	updateUserAddress,
+	updateUserTeams
 }
 
 const ModalContainer = connect(

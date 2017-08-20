@@ -31,6 +31,7 @@ class Modal extends Component {
 		this.addTeam = this.addTeam.bind(this);
 		this.handleValueChange = this.handleValueChange.bind(this);
 		this.thishandleTeamValueChange = this.handleTeamValueChange.bind(this);
+		this.handleSave = this.handleSave.bind(this);
 	}
 	modalTitle(activeModal, user) {
 		return (activeModal !== 'team') ? (
@@ -66,10 +67,22 @@ class Modal extends Component {
 		this.setState((prevState) => {
 			console.log(newVal);
 			return {
-				//teams: [...prevState.teams]
 				teams: [...prevState.teams.slice(0, i), newVal, ...prevState.teams.slice(i+1)]
 			}
 		})
+	}
+	handleSave() {
+		if(this.props.activeModal === 'team') {
+			let teams = this.state.teams.filter((team) => {
+				return team.length > 0;
+			})
+			this.props.updateUserTeams(teams);
+		} else if(this.props.activeModal === 'name') {
+			this.props.updateUserName(this.state.value);
+		} else {
+			this.props.updateUserAddress(this.state.value);
+		}
+		this.props.changeActiveModal(null);
 	}
 	render() {
 		return (
@@ -99,7 +112,7 @@ class Modal extends Component {
 					}
 					{this.props.activeModal === 'team' && <button className='add-team' onClick={this.addTeam}>+ Add Another</button>}
 					<button className='modal-button modal-cancel' onClick={() => this.props.changeActiveModal(null)}>Cancel</button>
-					<button className='modal-button modal-save'>Save</button>
+					<button className='modal-button modal-save' onClick={this.handleSave}>Save</button>
 					<div className='modal-close' onClick={() => this.props.changeActiveModal(null)}>
 						Close 
 						<svg width='20' height='20' viewBox='0 0 20 20' className='close-icon'>
