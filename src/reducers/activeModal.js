@@ -1,7 +1,7 @@
 const activeModal = (state = null, action) => {
 	switch (action.type) {
-		case 'UPDATE_MODAL':
-			return state;
+		case 'CHANGE_ACTIVE_MODAL':
+			return action.value;
 		default:
 			return state;
 	}
