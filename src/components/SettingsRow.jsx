@@ -3,10 +3,10 @@ import Button from './Button.jsx';
 import SettingsInfo from './SettingsInfo.jsx';
 import '../styles/Settings.css';
 
-const SettingsRow = (props) => (
+const SettingsRow = ({ info, changeActiveModal, title }) => (
 	<div className='settings-row'>
-		<SettingsInfo user={props.user}/>
-		<Button changeActiveModal={props.changeActiveModal}/>
+		<SettingsInfo info={ info } title={ title } />
+		<Button changeActiveModal={ changeActiveModal } title={ title } info={ info }/>
 	</div>
 )
 

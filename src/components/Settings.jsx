@@ -7,13 +7,13 @@ const Settings = (props) => (
 		<div className='settings'>
 			<h1 className='settings-title'>Sports Magazine Settings</h1>
 			<hr/>
-			<SettingsRow {...props}>
+			<SettingsRow info={props.user.name} title='Name' changeActiveModal={props.changeActiveModal}>
 			</SettingsRow>
 			<hr/>
-			<SettingsRow {...props}>
+			<SettingsRow info={props.user.address} title='Address' changeActiveModal={props.changeActiveModal}>
 			</SettingsRow>
 			<hr/>
-			<SettingsRow {...props}>
+			<SettingsRow info={props.user.teams} title='Favourite Teams' changeActiveModal={props.changeActiveModal}>
 			</SettingsRow>
 		</div>
 	</div>

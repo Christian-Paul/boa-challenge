@@ -33,3 +33,9 @@
 .settings-row > .button {
 	margin-left: 5rem;
 }
+
+.no-teams {
+	margin-top: 1rem;
+	color: #9E9E9E;
+	font-size: 0.85rem;
+}
