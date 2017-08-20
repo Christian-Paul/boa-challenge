@@ -13,8 +13,10 @@ const SettingsInfo = ({ info, title }) => (
 				<p className='settings-info-details-text'>{ info }</p>
 			) : (
 				(info.length > 0) ? (
-					<ol>
-						<li>Team</li>
+					<ol className='team-list'>
+						{info.map((team, i) => {
+							return <li className='settings-info-details-text' key={i}>{team}</li>
+						})}
 					</ol>
 				) : (
 					<NoTeams />
