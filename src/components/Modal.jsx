@@ -8,10 +8,13 @@ class Modal extends Component {
 		super(props);
 
 		let teams = [];
+		let limit = props.user.teams.length === 0 ? 3 : props.user.teams.length;
 
-		for(let i = 0; i < 3; i++) {
+		for(let i = 0; i < limit; i++) {
 			if(!props.user.teams[i]) {
 				teams[i] = '';
+			} else {
+				teams[i] = props.user.teams[i];
 			}
 		}
 
