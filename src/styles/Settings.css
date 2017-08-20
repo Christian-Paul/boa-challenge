@@ -1,0 +1,35 @@
+.settings-holder {
+	display: flex;
+	justify-content: center;
+}
+
+.settings {
+	max-width: 90vw;
+	width: 100%;
+}
+
+.settings-title {
+	font-weight: normal;
+	font-size: 1.75rem;
+	color: #616161;
+}
+
+.settings-info-name {
+	color: #424242;
+	margin: 1rem 0rem 0rem 0rem;
+}
+
+.settings-info-details-text {
+	color: #616161;
+	margin-top: 0.5rem;
+	font-size: 0.85rem;
+}
+
+.settings-row {
+	display: flex;
+	align-items: center;
+}
+
+.settings-row > .button {
+	margin-left: 5rem;
+}

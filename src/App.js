@@ -7,7 +7,7 @@ import Settings from './components/Settings.jsx';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className='app'>
         <Navbar page='Sports Magazine' />
         <Settings />
       </div>
